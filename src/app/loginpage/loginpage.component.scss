@@ -1,0 +1,140 @@
+@import "../../styles.scss";
+
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  max-width: 1920px;
+  @include df-jc-ac;
+  background-color: rgb(190, 192, 214);
+
+  .login-container {
+    width: 606px;
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 1);
+    @include df-jc-ac;
+    flex-direction: column;
+    padding: 50px 60px;
+    gap: 30px;
+    border: 0px solid black;
+    .headline-container {
+      border: 0px solid black;
+      @include df-jc-ac;
+      flex-direction: column;
+      gap: 30px;
+
+      h1 {
+        font-weight: 700;
+        font-size: 46px;
+        line-height: 55.2px;
+        color: rgba(68, 77, 242, 1);
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+      }
+    }
+    .form-container {
+      border: 0px solid black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+
+      input {
+        width: 500px;
+        height: 60px;
+        background: rgba(236, 238, 254, 1);
+        border: 1px solid transparent;
+        border-radius: 100px;
+        padding: 32px 18px;
+        font-weight: 500;
+        font-size: 18px;
+        color: rgba(104, 104, 104, 104);
+        &:hover {
+          @include cursorPointer;
+          border: 1px solid rgba(83, 90, 241, 1);
+        }
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .pw-forgotten {
+        color: rgba(121, 126, 243, 1);
+        font-weight: 400;
+        font-size: 18px;
+        padding: 5px 15px;
+        border-radius: 30px;
+        &:hover {
+          @include cursorPointer;
+          font-weight: 700;
+          color: rgba(68, 77, 242, 1);
+          background-color: rgba(236, 238, 254, 1);
+        }
+      }
+    }
+
+    .seperator-container {
+      @include df-jc-ac;
+      flex-direction: row;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 24px;
+      width: 100%;
+      .or {
+        margin: 0px 20px;
+      }
+      .line {
+        height: 1px;
+        border: 1px solid rgba(173, 176, 217, 1);
+        width: 100%;
+        margin: 0px 0px;
+      }
+    }
+
+    .google_login_container {
+      width: 100%;
+      height: 60px;
+      padding: 32px 11px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      border: unset;
+      color: rgba(68, 77, 242, 1);
+      font-weight: 400;
+      font-size: 18px;
+      background-color: rgba(236, 238, 254, 1);
+      border-radius: 100px;
+      &:hover {
+        border: 1px solid rgba(68, 77, 242, 1);
+        font-weight: 700;
+        @include cursorPointer;
+      }
+    }
+
+    .buttons-container {
+      display: flex;
+      gap: 30px;
+      .blue-button {
+        @include blueButton;
+        &:hover {
+          @include cursorPointer;
+          background-color: rgba(151, 71, 255, 1);
+        }
+      }
+      .white-button {
+        @include whiteButton;
+        &:hover {
+          @include cursorPointer;
+          background-color: rgba(83, 90, 241, 1);
+          color: rgba(255, 255, 255, 1);
+        }
+      }
+    }
+  }
+}

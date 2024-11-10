@@ -1,0 +1,54 @@
+@import "./../../app/loginpage/loginpage.component.scss";
+@import "./../../app/sign-in/sign-in.component.scss";
+@import "./../../styles.scss";
+.headline {
+  display: flex;
+  gap: 14px;
+  margin-left: 0px;
+  border: 0px solid black;
+}
+.login-container {
+  width: 606px;
+  gap: 32px;
+}
+.white-button {
+  @include whiteButton;
+  width: 200px;
+  &:hover {
+    @include cursorPointer;
+    background-color: rgba(83, 90, 241, 1);
+    color: rgba(255, 255, 255, 1);
+  }
+}
+
+.my-avatar {
+  height: 136px;
+  width: 136px;
+}
+
+.info-container {
+  font-weight: 700;
+  font-size: 32px;
+}
+.info-text {
+  width: 100%;
+  font-weight: 400;
+  font-size: 20px;
+  border: 0px solid black;
+}
+
+.avatar-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.own-img-container {
+  width: 100%;
+  font-size: 20px;
+  font-weight: 400;
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
