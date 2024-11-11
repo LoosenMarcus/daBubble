@@ -6,7 +6,9 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { AvatarPickerComponent } from './avatar-picker/avatar-picker.component';
 import { ResetPwComponent } from './reset-pw/reset-pw.component';
 import { NewPwComponent } from './new-pw/new-pw.component';
-export const routes: Routes = [{ path: '', component: NewPwComponent }];
+import { StartscreenComponent } from './startscreen/startscreen.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
+export const routes: Routes = [{ path: '', component: StartscreenComponent }];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],

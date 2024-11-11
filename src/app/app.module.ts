@@ -8,6 +8,8 @@ import { SignInComponent } from './sign-in/sign-in.component';
 import { AvatarPickerComponent } from './avatar-picker/avatar-picker.component';
 import { ResetPwComponent } from './reset-pw/reset-pw.component';
 import { NewPwComponent } from './new-pw/new-pw.component';
+import { StartscreenComponent } from './startscreen/startscreen.component';
+import { MainpageComponent } from './mainpage/mainpage.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { NewPwComponent } from './new-pw/new-pw.component';
     AvatarPickerComponent,
     ResetPwComponent,
     NewPwComponent,
+    StartscreenComponent,
+    MainpageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
