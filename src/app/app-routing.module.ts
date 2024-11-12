@@ -8,7 +8,7 @@ import { ResetPwComponent } from './reset-pw/reset-pw.component';
 import { NewPwComponent } from './new-pw/new-pw.component';
 import { StartscreenComponent } from './startscreen/startscreen.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
-export const routes: Routes = [{ path: '', component: StartscreenComponent }];
+export const routes: Routes = [{ path: '', component: MainpageComponent }];
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule],
