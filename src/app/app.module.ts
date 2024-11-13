@@ -10,6 +10,9 @@ import { ResetPwComponent } from './reset-pw/reset-pw.component';
 import { NewPwComponent } from './new-pw/new-pw.component';
 import { StartscreenComponent } from './startscreen/startscreen.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
+import { WorkspaceMenuComponent } from './workspace-menu/workspace-menu.component';
+import { ChatMainComponent } from './chat-main/chat-main.component';
+import { ChatSmallComponent } from './chat-small/chat-small.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { MainpageComponent } from './mainpage/mainpage.component';
     NewPwComponent,
     StartscreenComponent,
     MainpageComponent,
+    WorkspaceMenuComponent,
+    ChatMainComponent,
+    ChatSmallComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

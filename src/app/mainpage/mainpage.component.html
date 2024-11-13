@@ -21,36 +21,12 @@
   </div>
   <div class="wrapper-main">
     <div class="left-container">
-      <div class="workspace-top-container">
-        <img class="top-logo" src="./../../assets/img/workspace-logo.svg" />
-        Devspace
-        <img class="mL58" src="./../../assets/img/edit_square.svg" />
-      </div>
-      <div class="workspace-middle-container">
-        <img src="./../../assets/img/arrow_drop_down.png" />
-        <div class="gap10">
-          <img src="./../../assets/img/workspaces.svg" />
-          Channels
-        </div>
-        <img class="mL100" src="./../../assets/img/add.svg" />
-      </div>
-      <div class="direkt-msg-container">
-        <img class="arrow-img" src="./../../assets/img/arrow_drop_down.png" />
-        <div class="gap10 mR15">
-          <img src="./../../assets/img/account_circle.svg" />
-          Direcknachrichten
-        </div>
-      </div>
-      <div class="user-overview">
-        <span><img src="../../assets/img/00c.Charaters (1).svg" />Test</span>
-        <span><img src="../../assets/img/00c.Charaters (1).svg" />Test</span
-        ><span><img src="../../assets/img/00c.Charaters (1).svg" />Test</span
-        ><span><img src="../../assets/img/00c.Charaters (1).svg" />Test</span
-        ><span><img src="../../assets/img/00c.Charaters (1).svg" />Test</span>
-      </div>
+      <app-workspace-menu></app-workspace-menu>
     </div>
-    <div class="middle-container">5</div>
-    <div class="right-container">6</div>
+    <div class="middle-container"><app-chat-main></app-chat-main></div>
+    <div class="right-container">
+      <app-chat-small></app-chat-small>
+    </div>
   </div>
 </div>
 
