@@ -13,6 +13,8 @@ import { MainpageComponent } from './mainpage/mainpage.component';
 import { WorkspaceMenuComponent } from './workspace-menu/workspace-menu.component';
 import { ChatMainComponent } from './chat-main/chat-main.component';
 import { ChatSmallComponent } from './chat-small/chat-small.component';
+import { ImpressumComponent } from './impressum/impressum.component';
+import { DisclaimerComponent } from './disclaimer/disclaimer.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +30,8 @@ import { ChatSmallComponent } from './chat-small/chat-small.component';
     WorkspaceMenuComponent,
     ChatMainComponent,
     ChatSmallComponent,
+    ImpressumComponent,
+    DisclaimerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

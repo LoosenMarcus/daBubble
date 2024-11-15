@@ -9,7 +9,7 @@ import { NewPwComponent } from './new-pw/new-pw.component';
 import { StartscreenComponent } from './startscreen/startscreen.component';
 import { MainpageComponent } from './mainpage/mainpage.component';
 
-export const routes: Routes = [{ path: '', component: MainpageComponent }];
+export const routes: Routes = [{ path: '', component: LoginpageComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
