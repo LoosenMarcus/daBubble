@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes, RouterOutlet } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { LoginpageComponent } from './loginpage/loginpage.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SignInComponent } from './sign-in/sign-in.component';
