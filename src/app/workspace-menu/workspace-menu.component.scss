@@ -1,10 +1,20 @@
+.wrapper {
+  background-color: #ffffff;
+  border-radius: 30px;
+  padding: 32px 30px;
+  gap: 25px;
+  margin-top: 25px;
+  // height: 100vh;
+}
 .workspace-top-container {
   border: 0px solid black;
   display: flex;
   align-items: center;
-  gap: 25px;
+  justify-content: center;
+  gap: 50px;
   font-size: 24px;
   font-weight: 700;
+  margin-bottom: 25px;
   .top-logo {
     width: 60px;
     height: 60px;
@@ -15,14 +25,29 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 25px;
+  gap: 50px;
   font-size: 20px;
   font-weight: 700;
+  .workspace-middle-container-top {
+    width: 100%;
+    border: 0px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .workspace-middle-container-bottom {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+  }
 }
 .direkt-msg-container {
   border: 0px solid black;
   display: flex;
-  gap: 25px;
+  // justify-content: space-between;
+  gap: 26px;
   align-items: center;
   font-size: 20px;
   font-weight: 700;
@@ -54,18 +79,18 @@
   gap: 10px;
 }
 
-.mR15 {
-  margin-right: 15px;
-}
+// .mR15 {
+//   margin-right: 15px;
+// }
 
-.mL100 {
-  margin-left: 100px;
-}
+// .mL100 {
+//   margin-left: 100px;
+// }
 
-.mL58 {
-  margin-left: 58px;
-}
+// .mL58 {
+//   margin-left: 58px;
+// }
 
-.mB50 {
-  margin-bottom: 50px;
-}
+// .mB50 {
+//   margin-bottom: 50px;
+// }

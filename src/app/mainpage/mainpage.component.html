@@ -1,4 +1,4 @@
-<div class="wrapper">
+<!-- <div class="wrapper">
   <div class="wrapper-top">
     <div class="logo">
       <img src="./../../assets/img/logo.svg" />
@@ -33,4 +33,31 @@
 <div class="workspace-container-left-menue">
   Workspace-Menü schliessen
   <img src="./../../assets/img/Group 2a.svg" />
+</div> -->
+
+<div class="wrapper">
+  <div class="logo">
+    <div class="logo-container">
+      <img src="./../../assets/img/logo.svg" />
+      <h1>DABubble</h1>
+    </div>
+    <app-workspace-menu></app-workspace-menu>
+  </div>
+  <div class="search">
+    <input
+      type="text"
+      name="search"
+      id="search"
+      placeholder="Devspace durchsuchen"
+      required
+    /><app-chat-main></app-chat-main>
+  </div>
+  <div class="user">
+    <div class="user-container">
+      Username
+      <img class="user-img" src="./../../assets/img/00c.Charaters (2).svg" />
+      <img class="arrow-img" src="./../../assets/img/arrow_drop_down.svg" />
+    </div>
+    <app-chat-small></app-chat-small>
+  </div>
 </div>
