@@ -15,26 +15,27 @@ import { ChatMainComponent } from './chat-main/chat-main.component';
 import { ChatSmallComponent } from './chat-small/chat-small.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { DisclaimerComponent } from './disclaimer/disclaimer.component';
+import { bootstrapApplication } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    LoginpageComponent,
-    ProfileComponent,
-    SignInComponent,
-    AvatarPickerComponent,
-    ResetPwComponent,
-    NewPwComponent,
-    StartscreenComponent,
-    MainpageComponent,
-    WorkspaceMenuComponent,
-    ChatMainComponent,
-    ChatSmallComponent,
-    ImpressumComponent,
-    DisclaimerComponent,
+    // AppComponent,
+    // LoginpageComponent,
+    // ProfileComponent,
+    // SignInComponent,
+    // AvatarPickerComponent,
+    // ResetPwComponent,
+    // NewPwComponent,
+    // StartscreenComponent,
+    // MainpageComponent,
+    // WorkspaceMenuComponent,
+    // ChatMainComponent,
+    // ChatSmallComponent,
+    // ImpressumComponent,
+    // DisclaimerComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent],
+  // bootstrap: [],
 })
 export class AppModule {}
