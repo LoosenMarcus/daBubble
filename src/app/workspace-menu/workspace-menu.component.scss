@@ -98,24 +98,24 @@
   }
 }
 
-.gap10 {
+.menu-close-container {
+  // width: 306px;
+  position: absolute;
+  left: -112px;
+  top: 581px;
+  padding: 23px 14px;
   display: flex;
   align-items: center;
+
   gap: 10px;
+  background-color: rgba(255, 255, 255, 1);
+  box-shadow: 0px 4px 7px 2px rgba(0, 0, 0, 0.2);
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  transform: rotate(-90deg);
+  img {
+    width: 20px;
+    height: 20px;
+    transform: rotate(-90deg);
+  }
 }
-
-// .mR15 {
-//   margin-right: 15px;
-// }
-
-// .mL100 {
-//   margin-left: 100px;
-// }
-
-// .mL58 {
-//   margin-left: 58px;
-// }
-
-// .mB50 {
-//   margin-bottom: 50px;
-// }
