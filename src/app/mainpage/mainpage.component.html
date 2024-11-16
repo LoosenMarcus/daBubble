@@ -27,3 +27,19 @@
     <div><app-chat-small></app-chat-small></div>
   </div>
 </div>
+<!-- 
+@for(item of json; track item.id){
+<p>{{ item.name }}</p>
+} -->
+
+<!-- @for (item of json; track item.id) {
+<li>{{ item.name }}</li>
+} @empty {
+<li>There are no items.</li>
+} -->
+
+@if(variable){
+<p>True</p>
+} @else {
+<p>False</p>
+}
