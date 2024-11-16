@@ -23,6 +23,11 @@
       display: flex;
       align-items: center;
       gap: 10px;
+      .user-img {
+        margin-left: -20px;
+        border: 1px solid white;
+        border-radius: 100%;
+      }
       img {
         height: 40px;
         width: 40px;
