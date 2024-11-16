@@ -15,7 +15,6 @@ import { ChatMainComponent } from './chat-main/chat-main.component';
 import { ChatSmallComponent } from './chat-small/chat-small.component';
 import { ImpressumComponent } from './impressum/impressum.component';
 import { DisclaimerComponent } from './disclaimer/disclaimer.component';
-import { bootstrapApplication } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
