@@ -5,53 +5,77 @@
   gap: 25px;
   margin-top: 25px;
   height: calc(100vh - (95px + 50px));
-  // height: 100vh;
+  width: 360px;
 }
 .workspace-top-container {
-  border: 0px solid black;
+  border: 0px solid yellow;
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 50px;
+  justify-content: space-between;
   font-size: 24px;
   font-weight: 700;
   margin-bottom: 25px;
+  div {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
   .top-logo {
     width: 60px;
     height: 60px;
   }
 }
+
 .workspace-middle-container {
-  border: 0px solid black;
+  border: 0px solid blue;
   display: flex;
-  align-items: center;
   flex-direction: column;
-  gap: 50px;
+  align-items: center;
+  justify-content: space-between;
   font-size: 20px;
   font-weight: 700;
+  margin-bottom: 25px;
   .workspace-middle-container-top {
     width: 100%;
-    border: 0px solid black;
+    border: 0px solid rgb(247, 5, 5);
     display: flex;
     align-items: center;
     justify-content: space-between;
+    .outher-container {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+
+      div {
+        display: flex;
+        gap: 15px;
+      }
+    }
   }
   .workspace-middle-container-bottom {
     width: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 8px;
+    border: 0px solid rgb(9, 219, 9);
+    gap: 15px;
+    padding-left: 35px;
+    font-weight: 400;
+    font-size: 18px;
+    margin-top: 25px;
   }
 }
 .direkt-msg-container {
   border: 0px solid black;
   display: flex;
   // justify-content: space-between;
-  gap: 26px;
+  gap: 25px;
   align-items: center;
   font-size: 20px;
   font-weight: 700;
+  div {
+    display: flex;
+    gap: 15px;
+  }
 }
 .user-overview {
   margin-top: 30px;
