@@ -4,6 +4,5 @@ import { Component } from '@angular/core';
   selector: 'app-workspace-menu',
   templateUrl: './workspace-menu.component.html',
   styleUrls: ['./workspace-menu.component.scss'],
-  standalone: true,
 })
 export class WorkspaceMenuComponent {}

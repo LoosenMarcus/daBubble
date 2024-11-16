@@ -7,7 +7,5 @@ import { ChatSmallComponent } from '../chat-small/chat-small.component';
   selector: 'app-mainpage',
   templateUrl: './mainpage.component.html',
   styleUrls: ['./mainpage.component.scss'],
-  imports: [WorkspaceMenuComponent, ChatMainComponent, ChatSmallComponent],
-  standalone: true,
 })
 export class MainpageComponent {}
