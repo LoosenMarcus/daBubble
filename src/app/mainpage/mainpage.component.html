@@ -19,7 +19,7 @@
   </div>
 
   <div class="user">
-    <div class="user-container" (click)="openUserMenu()">
+    <div class="user-container" (click)="toggleContainer('userPopUp')">
       Username
       <img class="user-img" src="./../../assets/img/00c.Charaters (2).svg" />
       <img class="arrow-img" src="./../../assets/img/arrow_drop_down.svg" />
@@ -27,10 +27,36 @@
     <div><app-chat-small></app-chat-small></div>
   </div>
 </div>
-
+<!-- USer Pop Up Container -->
 @if(openUserMenuStatus) {
 <div class="userPopUpMenu">
-  <a href="">Profil</a>
-  <a href="">Logout</a>
+  <a (click)="toggleContainer('userProfile')">Profil</a>
+  <a>Logout</a>
+</div>
+} @if(openPopUpUserProfileStatus) {
+<!-- Profile PopUp-->
+<div class="profileWrapper">
+  <div class="profile-container">
+    <div class="head">
+      <span>Profil</span
+      ><a class="close" (click)="toggleContainer('userProfileClose')">X</a>
+    </div>
+    <img class="profile-img" src="./../../assets/img/00c.Charaters (1).svg" />
+    <div class="info-container">
+      Vorname Name
+      <span class="status"><span class="bullet">&bull;</span>Aktiv</span>
+      <div class="email-container">
+        <img src="./../../assets/img/mail.svg" />E-Mail-Adresse
+      </div>
+
+      <a class="link" href="#">mail(at)provider.de</a>
+
+      <div class="foot">
+        <button class="blue-button">
+          <img src="./../../assets/img/mode_comment.svg" />Nachricht
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 }
