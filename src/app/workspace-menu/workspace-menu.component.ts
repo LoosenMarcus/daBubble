@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class WorkspaceMenuComponent {
   addChannelPopUpStatus = false;
   addUserPopUpStatus = false;
+  workspaceMenuStatus = false;
 
   toggleAddChannelPopUp() {
     if (!this.addChannelPopUpStatus) {
