@@ -119,3 +119,135 @@
     transform: rotate(-90deg);
   }
 }
+@import "./../../styles.scss";
+/*ADD CHANNEL POPUP CONTAINER*/
+
+.addChannelWrapper {
+  width: 872px;
+  height: 539px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.2);
+  .top-container {
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .close {
+      font-size: 24px;
+      &:hover {
+        @include cursorPointer;
+        font-weight: 700;
+        color: rgba(68, 77, 242, 1);
+      }
+    }
+  }
+  span {
+    font-size: 18px;
+    font-weight: 400;
+    flex-wrap: wrap;
+  }
+  h4 {
+    font-weight: 700;
+    font-size: 18px;
+    span {
+      color: rgba(104, 104, 104, 1);
+    }
+  }
+  input {
+    width: 792px;
+    height: 60px;
+    border-radius: 40px;
+    border: 1px solid rgba(173, 176, 217, 1);
+    padding: 18px 20px;
+    display: flex;
+    gap: 20px;
+    outline: none;
+    font-size: 18px;
+    color: rgba(104, 104, 104, 1);
+  }
+  .bottomContainer {
+    display: flex;
+    justify-content: flex-end;
+    button {
+      width: 125px;
+      height: 49px;
+      border-radius: 25px;
+      padding: 12px 25px;
+      display: flex;
+      gap: 10px;
+      background-color: rgba(68, 77, 242, 1);
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 700;
+      border: 0px solid white;
+    }
+  }
+}
+
+/* Add User PopUp Container */
+
+.addUserWrapper {
+  width: 710px;
+  height: 279px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.2);
+  .top-container {
+    border: 0px solid blacK;
+    font-size: 24px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .close {
+      font-size: 24px;
+      &:hover {
+        @include cursorPointer;
+        font-weight: 700;
+        color: rgba(68, 77, 242, 1);
+      }
+    }
+  }
+
+  span {
+    color: rgba(104, 104, 104, 1);
+    display: flex;
+    border: 0px solid black;
+    gap: 20px;
+  }
+  .bottom-container {
+    display: flex;
+    justify-content: flex-end;
+    button {
+      width: 125px;
+      height: 49px;
+      border-radius: 25px;
+      padding: 12px 25px;
+      display: flex;
+      gap: 10px;
+      background-color: rgba(68, 77, 242, 1);
+      color: #ffffff;
+      font-size: 18px;
+      font-weight: 700;
+      border: 0px solid white;
+    }
+  }
+}

@@ -19,7 +19,10 @@
       <img src="./../../assets/img/add.svg" />
     </div>
 
-    <div class="workspace-middle-container-bottom">
+    <div
+      class="workspace-middle-container-bottom"
+      (click)="toggleAddChannelPopUp()"
+    >
       <img src="./../../assets/img/add_circle.svg" />Channel hinzufügen
     </div>
   </div>
@@ -43,3 +46,48 @@
   <span>Workspace-Menü schliessen</span>
   <img src="./../../assets/img/Group 2.svg" />
 </div>
+
+<!--ADD CHANNEL POPUP CONTAINER-->
+@if(addChannelPopUpStatus){
+<div class="addChannelWrapper">
+  <div class="top-container">
+    <h3>Channel erstellen</h3>
+    <span class="close" (click)="toggleAddChannelPopUp()">X</span>
+  </div>
+  <span
+    >Channels dienen deinem Team zur Kommunikation. Am besten sollten sie
+    themenbezogen sein #marketing zum Beispiel.</span
+  >
+  <h4>Channel-Name</h4>
+  <input
+    type="text"
+    name="channelNameInput"
+    placeholder="z.B. Kooperationsprojekte"
+  />
+  <h4>Beschreibung <span>(optional)</span></h4>
+  <input
+    type="text"
+    name="channelDiscriptionInput"
+    placeholder="Dein Text hier"
+  />
+  <div class="bottomContainer">
+    <button (click)="addUserPopUp()">Erstellen</button>
+  </div>
+</div>
+} @if(!addUserPopUpStatus){
+<div class="addUserWrapper">
+  <div class="top-container">
+    <h2>Leute hinzufügen</h2>
+    <span class="close" (click)="toggleAddUserPopUp()">X</span>
+  </div>
+  <span>
+    <input type="radio" name="user" checked />Alle Mitglieder von OfficeTeam
+    hinzufügen
+  </span>
+  <span><input type="radio" name="user" />Bestimmte Leute hinzufügen</span>
+
+  <div class="bottom-container">
+    <button>Erstellen</button>
+  </div>
+</div>
+}
