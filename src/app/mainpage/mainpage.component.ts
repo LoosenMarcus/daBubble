@@ -24,7 +24,7 @@ export class MainpageComponent {
   ];
   constructor() {
     // this.loadEmojis();
-    console.log(this.json);
+    // console.log(this.json);
   }
 
   /**
