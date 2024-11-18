@@ -14,9 +14,11 @@ export class MainpageComponent {
   openPopUpUserProfileStatus = false;
 
   toggleContainer(name: string) {
-    if (name == 'userPopUp') {
+    if (name == 'userPopUp' && this.openUserMenuStatus == false) {
       console.log('User Menü Pop Up');
       this.openUserMenuStatus = true;
+    } else if (name == 'userPopUp' && this.openUserMenuStatus == true) {
+      this.openUserMenuStatus = false;
     } else if (name == 'userProfile') {
       console.log('user Profile');
       this.openUserMenuStatus = false;
