@@ -4,7 +4,13 @@
       <img src="./../../assets/img/logo.svg" />
       <h1>DABubble</h1>
     </div>
-    <div><app-workspace-menu></app-workspace-menu></div>
+    <div
+      [ngStyle]="
+        isHideWorkspaceContainer ? { display: 'none' } : { display: 'block' }
+      "
+    >
+      <app-workspace-menu></app-workspace-menu>
+    </div>
   </div>
 
   <div class="search">
@@ -58,5 +64,21 @@
       </div>
     </div>
   </div>
+</div>
+}
+
+<!-- Toggle WORKSPACE CONTAINER  -->
+@if(!isHideWorkspaceContainer) {
+<div (click)="isHideWorkspaceContainer = true" class="menu-close-container">
+  <span>Workspace-Menü schliessen</span>
+  <img src="./../../assets/img/Group-2a.svg" />
+</div>
+} @else {
+<div
+  (click)="isHideWorkspaceContainer = false"
+  class="menu-close-container menu-close-container-to-open"
+>
+  <span>Workspace-Menü öffnen</span>
+  <img src="./../../assets/img/Group-2.svg" />
 </div>
 }

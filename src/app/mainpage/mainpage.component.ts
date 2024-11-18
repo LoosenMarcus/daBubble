@@ -12,6 +12,7 @@ import { Routes, RouterLink, RouterOutlet } from '@angular/router';
 export class MainpageComponent {
   openUserMenuStatus = false;
   openPopUpUserProfileStatus = false;
+  isHideWorkspaceContainer = false;
 
   toggleContainer(name: string) {
     if (name == 'userPopUp' && this.openUserMenuStatus == false) {
