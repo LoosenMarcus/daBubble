@@ -1,12 +1,13 @@
 .wrapper {
   border-radius: 30px;
+  height: 100%;
   background-color: #ffffff;
   margin-right: 25px;
   margin-bottom: 25px;
   margin-top: 25px;
   width: 470px;
   border: 0px solid black;
-  height: calc(100vh - 145px);
+  height: calc(100vh - 150px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
