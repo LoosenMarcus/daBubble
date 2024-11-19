@@ -1,10 +1,15 @@
-<div class="wrapper">
+<div
+  class="wrapper"
+  [ngStyle]="
+    isHideSmallChatContainer ? { display: 'none' } : { display: 'block' }
+  "
+>
   <header>
     <div class="headline-container">
       <h2>Thread</h2>
       # Entwicklerteam
     </div>
-    <span class="close">X</span>
+    <span class="close" (click)="isHideSmallChatContainer = true">X</span>
   </header>
 
   <div class="message-container">
