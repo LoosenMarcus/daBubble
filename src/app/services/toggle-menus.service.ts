@@ -16,6 +16,7 @@ export class ToggleMenuService {
   private isHideDirektMessageContainerSubject = new BehaviorSubject<boolean>(
     false
   );
+  private isHideChannelContainerSubject = new BehaviorSubject<boolean>(false);
   // Exponierte Observables für die Komponenten
   isHideWorkspaceContainer$ =
     this.isHideWorkspaceContainerSubject.asObservable();
@@ -28,6 +29,7 @@ export class ToggleMenuService {
   isHideAddUserContainer$ = this.isHideAddUserContainerSubject.asObservable();
   isHideDirektMessageContainer$ =
     this.isHideDirektMessageContainerSubject.asObservable();
+  isHideChannelContainer$ = this.isHideChannelContainerSubject.asObservable();
   // Generische Umschaltmethode, die je nach übergebenem Parameter den Zustand toggelt
   toggleContainer(
     container:
@@ -38,6 +40,7 @@ export class ToggleMenuService {
       | 'smallChat'
       | 'addUser'
       | 'direktMessage'
+      | 'channel'
   ) {
     switch (container) {
       case 'workspace':
@@ -75,6 +78,11 @@ export class ToggleMenuService {
           !this.isHideDirektMessageContainerSubject.value
         );
         break;
+      case 'channel':
+        this.isHideChannelContainerSubject.next(
+          !this.isHideChannelContainerSubject.value
+        );
+        break;
       default:
         console.error('Unknown container type');
     }
@@ -90,6 +98,7 @@ export class ToggleMenuService {
       | 'smallChat'
       | 'addUser'
       | 'direktMessage'
+      | 'channel'
   ): boolean {
     switch (container) {
       case 'workspace':
@@ -106,6 +115,8 @@ export class ToggleMenuService {
         return this.isHideAddUserContainerSubject.value;
       case 'direktMessage':
         return this.isHideDirektMessageContainerSubject.value;
+      case 'channel':
+        return this.isHideChannelContainerSubject.value;
       default:
         console.error('Unknown container type');
         return false;

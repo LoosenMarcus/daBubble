@@ -9,22 +9,34 @@
 
   <div class="workspace-middle-container">
     <div class="workspace-middle-container-top">
-      <div class="outher-container">
-        <img src="./../../assets/img/arrow_drop_down.png" />
+      <div class="outher-container" (click)="toggleContainer('channel')">
+        <img
+          src="./../../assets/img/arrow_drop_down.png"
+          [ngStyle]="{ rotate: !isHideChannelContainer ? 'none' : '-90deg' }"
+        />
         <div>
           <img src="./../../assets/img/workspaces.svg" />
           Channels
         </div>
       </div>
-      <img src="./../../assets/img/add.svg" />
-    </div>
 
+      <img
+        (click)="toggleContainer('addChannel')"
+        src="./../../assets/img/add.svg"
+      />
+    </div>
+    @if(!isHideChannelContainer) {
+    <div>
+      channel 1<br />
+      channel2
+    </div>
     <div
       class="workspace-middle-container-bottom"
       (click)="toggleContainer('addChannel')"
     >
       <img src="./../../assets/img/add_circle.svg" />Channel hinzufügen
     </div>
+    }
   </div>
 
   <div class="direkt-msg-container" (click)="toggleContainer('direktMessage')">
