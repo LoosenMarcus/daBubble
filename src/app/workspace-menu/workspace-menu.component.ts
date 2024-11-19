@@ -13,6 +13,7 @@ export class WorkspaceMenuComponent implements OnInit {
   isHideUserMenuContainer!: boolean;
   isHideSmallChatContainer!: boolean;
   isHideAddUserContainer!: boolean;
+  isHideDirektMessageContainer!: boolean;
 
   constructor(private toggleMenuService: ToggleMenuService) {}
 
@@ -36,6 +37,9 @@ export class WorkspaceMenuComponent implements OnInit {
     this.toggleMenuService.isHideAddUserContainer$.subscribe(
       (value) => (this.isHideAddUserContainer = value)
     );
+    this.toggleMenuService.isHideDirektMessageContainer$.subscribe(
+      (value) => (this.isHideDirektMessageContainer = value)
+    );
   }
 
   // Generische Methode zum Umschalten des Containers
@@ -47,6 +51,7 @@ export class WorkspaceMenuComponent implements OnInit {
       | 'userMenu'
       | 'smallChat'
       | 'addUser'
+      | 'direktMessage'
   ) {
     this.toggleMenuService.toggleContainer(container);
   }

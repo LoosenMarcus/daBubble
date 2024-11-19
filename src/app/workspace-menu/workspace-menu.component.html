@@ -27,14 +27,21 @@
     </div>
   </div>
 
-  <div class="direkt-msg-container">
-    <img class="arrow-img" src="./../../assets/img/arrow_drop_down.png" />
+  <div class="direkt-msg-container" (click)="toggleContainer('direktMessage')">
+    <img
+      class="arrow-img"
+      src="./../../assets/img/arrow_drop_down.png"
+      [ngStyle]="{ rotate: !isHideDirektMessageContainer ? 'none' : '-90deg' }"
+    />
     <div>
       <img src="./../../assets/img/account_circle.svg" />
       Direcknachrichten
     </div>
   </div>
-  <div class="user-overview">
+  <div
+    class="user-overview"
+    [ngStyle]="{ display: isHideDirektMessageContainer ? 'none' : 'flex' }"
+  >
     <span><img src="../../assets/img/00c.Charaters (1).svg" />Test</span>
     <span><img src="../../assets/img/00c.Charaters (1).svg" />Test</span
     ><span><img src="../../assets/img/00c.Charaters (1).svg" />Test</span
@@ -85,7 +92,7 @@
   <span><input type="radio" name="user" />Bestimmte Leute hinzufügen</span>
 
   <div class="bottom-container">
-    <button>Erstellen</button>
+    <button (click)="toggleContainer('addUser')">Erstellen</button>
   </div>
 </div>
 }

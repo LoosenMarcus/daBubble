@@ -13,7 +13,9 @@ export class ToggleMenuService {
   private isHideUserMenuContainerSubject = new BehaviorSubject<boolean>(false);
   private isHideSmallChatContainerSubject = new BehaviorSubject<boolean>(false);
   private isHideAddUserContainerSubject = new BehaviorSubject<boolean>(false);
-
+  private isHideDirektMessageContainerSubject = new BehaviorSubject<boolean>(
+    false
+  );
   // Exponierte Observables für die Komponenten
   isHideWorkspaceContainer$ =
     this.isHideWorkspaceContainerSubject.asObservable();
@@ -24,7 +26,8 @@ export class ToggleMenuService {
   isHideSmallChatContainer$ =
     this.isHideSmallChatContainerSubject.asObservable();
   isHideAddUserContainer$ = this.isHideAddUserContainerSubject.asObservable();
-
+  isHideDirektMessageContainer$ =
+    this.isHideDirektMessageContainerSubject.asObservable();
   // Generische Umschaltmethode, die je nach übergebenem Parameter den Zustand toggelt
   toggleContainer(
     container:
@@ -34,6 +37,7 @@ export class ToggleMenuService {
       | 'userMenu'
       | 'smallChat'
       | 'addUser'
+      | 'direktMessage'
   ) {
     switch (container) {
       case 'workspace':
@@ -66,6 +70,11 @@ export class ToggleMenuService {
           !this.isHideAddUserContainerSubject.value
         );
         break;
+      case 'direktMessage':
+        this.isHideDirektMessageContainerSubject.next(
+          !this.isHideDirektMessageContainerSubject.value
+        );
+        break;
       default:
         console.error('Unknown container type');
     }
@@ -80,6 +89,7 @@ export class ToggleMenuService {
       | 'userMenu'
       | 'smallChat'
       | 'addUser'
+      | 'direktMessage'
   ): boolean {
     switch (container) {
       case 'workspace':
@@ -94,6 +104,8 @@ export class ToggleMenuService {
         return this.isHideSmallChatContainerSubject.value;
       case 'addUser':
         return this.isHideAddUserContainerSubject.value;
+      case 'direktMessage':
+        return this.isHideDirektMessageContainerSubject.value;
       default:
         console.error('Unknown container type');
         return false;
