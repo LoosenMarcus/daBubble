@@ -4,7 +4,7 @@
       <img src="./../../assets/img/logo.svg" />
       <h1>DABubble</h1>
     </div>
-    <div>
+    <div [ngStyle]="{ display: isHideWorkspaceContainer ? 'none' : 'block' }">
       <app-workspace-menu></app-workspace-menu>
     </div>
   </div>
@@ -21,25 +21,36 @@
   </div>
 
   <div class="user">
-    <div class="user-container">
+    <div class="user-container" (click)="toggleContainer('userMenu')">
       Username
       <img class="user-img" src="./../../assets/img/00c.Charaters (2).svg" />
       <img class="arrow-img" src="./../../assets/img/arrow_drop_down.svg" />
     </div>
-    <div><app-chat-small></app-chat-small></div>
+    <div [ngStyle]="{ display: isHideSmallChatContainer ? 'none' : 'block' }">
+      <app-chat-small></app-chat-small>
+    </div>
   </div>
 </div>
-<!-- USer Pop Up Container -->
+<!-- User Pop Up Container -->
 
+@if(isHideUserMenuContainer){
 <div class="userPopUpMenu">
-  <a>Profil</a>
+  <a (click)="toggleContainer('profile'); toggleContainer('userMenu')"
+    >Profil</a
+  >
   <a>Logout</a>
 </div>
-
+}
 <!-- Profile PopUp-->
-<div class="profileWrapper">
+<div
+  class="profileWrapper"
+  [ngStyle]="{ display: !isHideProfileContainer ? 'none' : 'flex' }"
+>
   <div class="profile-container">
-    <div class="head"><span>Profil</span><a class="close">X</a></div>
+    <div class="head">
+      <span>Profil</span
+      ><a class="close" (click)="toggleContainer('profile')">X</a>
+    </div>
     <img class="profile-img" src="./../../assets/img/00c.Charaters (1).svg" />
     <div class="info-container">
       Vorname Name
@@ -60,12 +71,17 @@
 </div>
 
 <!-- Toggle WORKSPACE CONTAINER  -->
-
-<div class="menu-close-container">
+@if(!isHideWorkspaceContainer){
+<div class="menu-close-container" (click)="toggleContainer('workspace')">
   <span>Workspace-Menü schliessen</span>
   <img src="./../../assets/img/Group-2a.svg" />
 </div>
-<div class="menu-close-container menu-close-container-to-open">
+} @else {
+<div
+  class="menu-close-container menu-close-container-to-open"
+  (click)="toggleContainer('workspace')"
+>
   <span>Workspace-Menü öffnen</span>
   <img src="./../../assets/img/Group-2.svg" />
 </div>
+}

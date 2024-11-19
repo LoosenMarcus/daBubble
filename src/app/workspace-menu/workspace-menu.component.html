@@ -21,7 +21,7 @@
 
     <div
       class="workspace-middle-container-bottom"
-      (click)="toggleAddChannelPopUp()"
+      (click)="toggleContainer('addChannel')"
     >
       <img src="./../../assets/img/add_circle.svg" />Channel hinzufügen
     </div>
@@ -44,11 +44,11 @@
 </div>
 
 <!--ADD CHANNEL POPUP CONTAINER-->
-@if(addChannelPopUpStatus){
+@if(isHideAddChannelContainer) {
 <div class="addChannelWrapper">
   <div class="top-container">
     <h3>Channel erstellen</h3>
-    <span class="close" (click)="toggleAddChannelPopUp()">X</span>
+    <span class="close" (click)="toggleContainer('addChannel')">X</span>
   </div>
   <span
     >Channels dienen deinem Team zur Kommunikation. Am besten sollten sie
@@ -67,14 +67,16 @@
     placeholder="Dein Text hier"
   />
   <div class="bottomContainer">
-    <button>Erstellen</button>
+    <button (click)="toggleContainer('addUser'); toggleContainer('addChannel')">
+      Erstellen
+    </button>
   </div>
 </div>
-} @if(addUserPopUpStatus){
+} @if(isHideAddUserContainer){
 <div class="addUserWrapper">
   <div class="top-container">
     <h2>Leute hinzufügen</h2>
-    <span class="close">X</span>
+    <span class="close" (click)="toggleContainer('addUser')">X</span>
   </div>
   <span>
     <input type="radio" name="user" checked />Alle Mitglieder von OfficeTeam
