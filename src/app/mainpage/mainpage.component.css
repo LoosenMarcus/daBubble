@@ -1,13 +1,11 @@
 .wrapper {
   border: 0px solid green;
-  height: 100vh;
   display: flex;
   background-color: rgba(65, 138, 247, 0.2);
 }
 .wrapper .logo {
   border: 0px solid black;
-  margin-left: 25px;
-  margin-right: 25px;
+  width: 366px;
   margin-bottom: 25px;
   display: flex;
   flex-direction: column;
@@ -21,10 +19,11 @@
 }
 .wrapper .search {
   border: 0px solid black;
+  flex-grow: 1;
 }
 .wrapper .search input {
   margin-top: 25px;
-  width: 990px;
+  width: 100%;
   border-radius: 42px;
   padding: 18px 45px;
   border: unset;
@@ -42,7 +41,7 @@
   font-size: 32px;
   font-weight: 700;
   margin-top: 25px;
-  margin-right: 25px;
+  width: 485px;
 }
 .wrapper .user .user-container {
   display: flex;
@@ -358,4 +357,11 @@ a {
 
 .menu-close-container-to-open {
   left: -100px;
+}
+
+.wrapper2 {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  background-color: rgba(65, 138, 247, 0.2);
 }/*# sourceMappingURL=mainpage.component.css.map */

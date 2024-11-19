@@ -4,9 +4,9 @@
       <img src="./../../assets/img/logo.svg" />
       <h1>DABubble</h1>
     </div>
-    <div [ngStyle]="{ display: isHideWorkspaceContainer ? 'none' : 'block' }">
-      <app-workspace-menu></app-workspace-menu>
-    </div>
+    <div
+      [ngStyle]="{ display: isHideWorkspaceContainer ? 'none' : 'block' }"
+    ></div>
   </div>
 
   <div class="search">
@@ -17,7 +17,6 @@
       placeholder="Devspace durchsuchen"
       required
     />
-    <div><app-chat-main></app-chat-main></div>
   </div>
 
   <div class="user">
@@ -26,22 +25,45 @@
       <img class="user-img" src="./../../assets/img/00c.Charaters (2).svg" />
       <img class="arrow-img" src="./../../assets/img/arrow_drop_down.svg" />
     </div>
-    <div [ngStyle]="{ display: isHideSmallChatContainer ? 'none' : 'block' }">
-      <app-chat-small></app-chat-small>
-    </div>
   </div>
 </div>
-<!-- User Pop Up Container -->
 
-@if(isHideUserMenuContainer){
-<div class="userPopUpMenu">
-  <a (click)="toggleContainer('profile'); toggleContainer('userMenu')"
-    >Profil</a
+<div class="wrapper2">
+  <div [ngStyle]="{ display: isHideWorkspaceContainer ? 'none' : 'block' }">
+    <app-workspace-menu></app-workspace-menu>
+  </div>
+  <div
+    [ngStyle]="{
+      width:
+        isHideWorkspaceContainer && isHideSmallChatContainer ? '100%' : '100%'
+    }"
   >
-  <a>Logout</a>
+    <app-chat-main></app-chat-main>
+  </div>
+  <!-- flexgrow1-->
+  <div [ngStyle]="{ display: isHideSmallChatContainer ? 'none' : 'block' }">
+    <app-chat-small></app-chat-small>
+  </div>
+</div>
+
+<!-- Toggle WORKSPACE CONTAINER  -->
+@if(!isHideWorkspaceContainer){
+<div class="menu-close-container" (click)="toggleContainer('workspace')">
+  <span>Workspace-Menü schliessen</span>
+  <img src="./../../assets/img/Group-2a.svg" />
+</div>
+} @else {
+<div
+  class="menu-close-container menu-close-container-to-open"
+  (click)="toggleContainer('workspace')"
+>
+  <span>Workspace-Menü öffnen</span>
+  <img src="./../../assets/img/Group-2.svg" />
 </div>
 }
+
 <!-- Profile PopUp-->
+
 <div
   class="profileWrapper"
   [ngStyle]="{ display: !isHideProfileContainer ? 'none' : 'flex' }"
@@ -70,18 +92,12 @@
   </div>
 </div>
 
-<!-- Toggle WORKSPACE CONTAINER  -->
-@if(!isHideWorkspaceContainer){
-<div class="menu-close-container" (click)="toggleContainer('workspace')">
-  <span>Workspace-Menü schliessen</span>
-  <img src="./../../assets/img/Group-2a.svg" />
-</div>
-} @else {
-<div
-  class="menu-close-container menu-close-container-to-open"
-  (click)="toggleContainer('workspace')"
->
-  <span>Workspace-Menü öffnen</span>
-  <img src="./../../assets/img/Group-2.svg" />
+<!-- User Pop Up Container -->
+@if(isHideUserMenuContainer){
+<div class="userPopUpMenu">
+  <a (click)="toggleContainer('profile'); toggleContainer('userMenu')"
+    >Profil</a
+  >
+  <a>Logout</a>
 </div>
 }
