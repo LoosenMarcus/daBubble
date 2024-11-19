@@ -1,0 +1,361 @@
+.wrapper {
+  border: 0px solid green;
+  height: 100vh;
+  display: flex;
+  background-color: rgba(65, 138, 247, 0.2);
+}
+.wrapper .logo {
+  border: 0px solid black;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.wrapper .logo .logo-container {
+  display: flex;
+  align-items: center;
+  gap: 29px;
+  padding-top: 25px;
+  padding-left: 50px;
+}
+.wrapper .search {
+  border: 0px solid black;
+}
+.wrapper .search input {
+  margin-top: 25px;
+  width: 990px;
+  border-radius: 42px;
+  padding: 18px 45px;
+  border: unset;
+  outline: none;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 25px;
+}
+.wrapper .user {
+  border: 0px solid black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  font-size: 32px;
+  font-weight: 700;
+  margin-top: 25px;
+  margin-right: 25px;
+}
+.wrapper .user .user-container {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 20px;
+  border: 0px solid blue;
+  margin-left: 150px;
+  padding-right: 25px;
+}
+.wrapper .user .user-img {
+  height: 70px;
+  width: 70px;
+}
+.wrapper .user .arrow-img {
+  height: 10px;
+  width: 10px;
+}
+
+.userPopUpMenu {
+  position: absolute;
+  top: 100px;
+  right: 30px;
+  width: 282px;
+  height: 181px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  padding: 30px 0px;
+  gap: 15px;
+  border-radius: 30px 0px 30px 30px;
+  box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+}
+.userPopUpMenu a {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000000;
+}
+
+/* Profile SCSS*/
+* {
+  margin: 0;
+  box-sizing: border-box;
+  margin-block-end: 0;
+  margin-block-start: 0;
+  font-family: "Nunito", "sans-serif";
+}
+
+a {
+  font-size: 18px;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+/* nunito-200 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 200;
+  src: url("./assets/fonts/nunito-v26-latin-200.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-200italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 200;
+  src: url("./assets/fonts/nunito-v26-latin-200italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-300 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 300;
+  src: url("./assets/fonts/nunito-v26-latin-300.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-300italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 300;
+  src: url("./assets/fonts/nunito-v26-latin-300italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-regular - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 400;
+  src: url("./assets/fonts/nunito-v26-latin-regular.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 400;
+  src: url("./assets/fonts/nunito-v26-latin-italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-500 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 500;
+  src: url("./assets/fonts/nunito-v26-latin-500.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-500italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 500;
+  src: url("./assets/fonts/nunito-v26-latin-500italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-600 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 600;
+  src: url("./assets/fonts/nunito-v26-latin-600.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-600italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 600;
+  src: url("./assets/fonts/nunito-v26-latin-600italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-700 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 700;
+  src: url("./assets/fonts/nunito-v26-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-700italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 700;
+  src: url("./assets/fonts/nunito-v26-latin-700italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-800 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 800;
+  src: url("./assets/fonts/nunito-v26-latin-800.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-800italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 800;
+  src: url("./assets/fonts/nunito-v26-latin-800italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-900 - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: normal;
+  font-weight: 900;
+  src: url("./assets/fonts/nunito-v26-latin-900.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* nunito-900italic - latin */
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: "Nunito";
+  font-style: italic;
+  font-weight: 900;
+  src: url("./assets/fonts/nunito-v26-latin-900italic.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+.profileWrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 50;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 705px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+}
+.profileWrapper .profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000000;
+  flex-direction: column;
+  gap: 45px;
+  width: 500px;
+  border-radius: 30px;
+  padding: 40px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.2);
+}
+.profileWrapper .head {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  border: 0px solid black;
+  font-weight: 700;
+  font-size: 24px;
+}
+.profileWrapper .head .close {
+  font-size: 24px;
+}
+.profileWrapper .head .close:hover {
+  cursor: pointer;
+  font-weight: 700;
+  color: rgb(68, 77, 242);
+}
+.profileWrapper .profile-img {
+  width: 200px;
+  height: 200px;
+}
+.profileWrapper .info-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-weight: 700;
+  font-size: 32px;
+}
+.profileWrapper .status {
+  font-weight: 400;
+  font-size: 20px;
+}
+.profileWrapper .status .bullet {
+  padding-right: 5px;
+}
+.profileWrapper .email-container {
+  width: 100%;
+  border: 0px solid black;
+  font-weight: 700;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin-top: 45px;
+}
+.profileWrapper .email-container img {
+  width: 30px;
+  height: 30px;
+  padding-right: 10px;
+}
+.profileWrapper .link {
+  margin-left: 30px;
+  margin-bottom: 45px;
+}
+.profileWrapper .link:hover {
+  cursor: pointer;
+  font-weight: 700;
+  color: rgb(68, 77, 242);
+}
+.profileWrapper .foot {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.profileWrapper .foot .blue-button {
+  width: 137px;
+  height: 49px;
+  border-radius: 25px;
+  padding: 12px 25px;
+  background-color: rgb(68, 77, 242);
+  border: unset;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+  width: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.profileWrapper .foot .blue-button:hover {
+  cursor: pointer;
+  background-color: rgb(151, 71, 255);
+}
+
+.menu-close-container {
+  position: absolute;
+  left: -112px;
+  top: 581px;
+  padding: 23px 14px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 4px 7px 2px rgba(0, 0, 0, 0.2);
+  border-bottom-right-radius: 30px;
+  border-bottom-left-radius: 30px;
+  transform: rotate(-90deg);
+}
+.menu-close-container img {
+  width: 20px;
+  height: 20px;
+  transform: rotate(90deg);
+}
+
+.menu-close-container-to-open {
+  left: -100px;
+}/*# sourceMappingURL=mainpage.component.css.map */

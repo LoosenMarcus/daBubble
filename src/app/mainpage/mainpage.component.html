@@ -4,11 +4,7 @@
       <img src="./../../assets/img/logo.svg" />
       <h1>DABubble</h1>
     </div>
-    <div
-      [ngStyle]="
-        isHideWorkspaceContainer ? { display: 'none' } : { display: 'block' }
-      "
-    >
+    <div>
       <app-workspace-menu></app-workspace-menu>
     </div>
   </div>
@@ -25,7 +21,7 @@
   </div>
 
   <div class="user">
-    <div class="user-container" (click)="toggleContainer('userPopUp')">
+    <div class="user-container">
       Username
       <img class="user-img" src="./../../assets/img/00c.Charaters (2).svg" />
       <img class="arrow-img" src="./../../assets/img/arrow_drop_down.svg" />
@@ -34,19 +30,16 @@
   </div>
 </div>
 <!-- USer Pop Up Container -->
-@if(openUserMenuStatus) {
+
 <div class="userPopUpMenu">
-  <a (click)="toggleContainer('userProfile')">Profil</a>
+  <a>Profil</a>
   <a>Logout</a>
 </div>
-} @if(openPopUpUserProfileStatus) {
+
 <!-- Profile PopUp-->
 <div class="profileWrapper">
   <div class="profile-container">
-    <div class="head">
-      <span>Profil</span
-      ><a class="close" (click)="toggleContainer('userProfileClose')">X</a>
-    </div>
+    <div class="head"><span>Profil</span><a class="close">X</a></div>
     <img class="profile-img" src="./../../assets/img/00c.Charaters (1).svg" />
     <div class="info-container">
       Vorname Name
@@ -65,20 +58,14 @@
     </div>
   </div>
 </div>
-}
 
 <!-- Toggle WORKSPACE CONTAINER  -->
-@if(!isHideWorkspaceContainer) {
-<div (click)="isHideWorkspaceContainer = true" class="menu-close-container">
+
+<div class="menu-close-container">
   <span>Workspace-Menü schliessen</span>
   <img src="./../../assets/img/Group-2a.svg" />
 </div>
-} @else {
-<div
-  (click)="isHideWorkspaceContainer = false"
-  class="menu-close-container menu-close-container-to-open"
->
+<div class="menu-close-container menu-close-container-to-open">
   <span>Workspace-Menü öffnen</span>
   <img src="./../../assets/img/Group-2.svg" />
 </div>
-}

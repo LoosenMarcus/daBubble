@@ -1,0 +1,71 @@
+.wrapper {
+  height: 100vh;
+  width: 100%;
+  max-width: 1940px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(190, 192, 214);
+}
+.wrapper .login-container {
+  background-color: rgb(255, 255, 255);
+  border-radius: 30px;
+  width: 698px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  margin: 40px 0;
+}
+.wrapper .login-container .headline-container {
+  color: rgb(68, 77, 242);
+}
+.wrapper .login-container .headline-container .headline {
+  margin-top: 40px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.wrapper .login-container .headline-container .headline h1 {
+  font-size: 46px;
+  font-weight: 700;
+}
+.wrapper .login-container p {
+  font-size: 20px;
+  font-weight: 400;
+}
+.wrapper .login-container .form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 30px;
+}
+.wrapper .login-container .form-container input {
+  font-size: 18px;
+  font-weight: 500;
+  width: 486px;
+  height: 60px;
+  border-radius: 100px;
+  background-color: rgb(236, 238, 254);
+  border: unset;
+  outline: none;
+  padding: 18px 32px;
+}
+.wrapper .login-container .buttons-container {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 100px;
+  margin-bottom: 40px;
+}
+.wrapper .login-container .buttons-container .blue-button {
+  width: 207px;
+  height: 49px;
+  border-radius: 25px;
+  padding: 12px 25px;
+  background-color: rgb(68, 77, 242);
+  border: unset;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 18px;
+}/*# sourceMappingURL=new-pw.component.css.map */

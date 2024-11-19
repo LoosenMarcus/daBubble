@@ -67,14 +67,14 @@
     placeholder="Dein Text hier"
   />
   <div class="bottomContainer">
-    <button (click)="addUserPopUp()">Erstellen</button>
+    <button>Erstellen</button>
   </div>
 </div>
 } @if(addUserPopUpStatus){
 <div class="addUserWrapper">
   <div class="top-container">
     <h2>Leute hinzufügen</h2>
-    <span class="close" (click)="toggleAddUserPopUp()">X</span>
+    <span class="close">X</span>
   </div>
   <span>
     <input type="radio" name="user" checked />Alle Mitglieder von OfficeTeam
