@@ -16,7 +16,10 @@ export class ToggleMenuService {
   private isHideDirektMessageContainerSubject = new BehaviorSubject<boolean>(
     false
   );
+  private isHideAddUserToExistingChannelContainerSubject =
+    new BehaviorSubject<boolean>(false);
   private isHideChannelContainerSubject = new BehaviorSubject<boolean>(false);
+
   // Exponierte Observables für die Komponenten
   isHideWorkspaceContainer$ =
     this.isHideWorkspaceContainerSubject.asObservable();
@@ -30,6 +33,8 @@ export class ToggleMenuService {
   isHideDirektMessageContainer$ =
     this.isHideDirektMessageContainerSubject.asObservable();
   isHideChannelContainer$ = this.isHideChannelContainerSubject.asObservable();
+  isHideAddUserToExistingChannelContainer$ =
+    this.isHideAddUserToExistingChannelContainerSubject.asObservable();
   // Generische Umschaltmethode, die je nach übergebenem Parameter den Zustand toggelt
   toggleContainer(
     container:
@@ -41,6 +46,7 @@ export class ToggleMenuService {
       | 'addUser'
       | 'direktMessage'
       | 'channel'
+      | 'addUserToExistingChannel'
   ) {
     switch (container) {
       case 'workspace':
@@ -83,6 +89,11 @@ export class ToggleMenuService {
           !this.isHideChannelContainerSubject.value
         );
         break;
+      case 'addUserToExistingChannel':
+        this.isHideAddUserToExistingChannelContainerSubject.next(
+          !this.isHideAddUserToExistingChannelContainerSubject.value
+        );
+        break;
       default:
         console.error('Unknown container type');
     }
@@ -99,6 +110,7 @@ export class ToggleMenuService {
       | 'addUser'
       | 'direktMessage'
       | 'channel'
+      | 'addUserToExistingChannel'
   ): boolean {
     switch (container) {
       case 'workspace':
@@ -117,6 +129,8 @@ export class ToggleMenuService {
         return this.isHideDirektMessageContainerSubject.value;
       case 'channel':
         return this.isHideChannelContainerSubject.value;
+      case 'addUserToExistingChannel':
+        return this.isHideAddUserToExistingChannelContainerSubject.value;
       default:
         console.error('Unknown container type');
         return false;

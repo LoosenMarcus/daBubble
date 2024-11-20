@@ -8,7 +8,11 @@
       <img class="user-img" src="./../../assets/img/00c.Charaters (2).svg" />
       <img class="user-img" src="./../../assets/img/00c.Charaters (3).svg" />
       <h2>3</h2>
-      <img class="person-add" src="./../../assets/img/person_add.svg" />
+      <img
+        class="person-add"
+        (click)="toggleContainer('addUserToExistingChannel')"
+        src="./../../assets/img/person_add.svg"
+      />
     </div>
   </div>
   <div class="chat-output-main">
@@ -45,3 +49,16 @@
     </div>
   </div>
 </div>
+@if(!isHideAddUserToExistingChannelContainer) {
+<div class="addUserToExistingChannelContainer">
+  <div class="top">
+    <h2>Leute hinzufügen</h2>
+    <span class="close" (click)="toggleContainer('addUserToExistingChannel')"
+      >X</span
+    >
+  </div>
+  <div class="channel-Name"># Netwicklerteam</div>
+  <input type="text" name="nameInput" placeholder="Name eingeben" />
+  <div class="bottom"><button>Hinzufügen</button></div>
+</div>
+}
