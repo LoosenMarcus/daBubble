@@ -14,6 +14,7 @@ export class ChatMainComponent implements OnInit {
   isHideSmallChatContainer!: boolean;
   isHideAddUserContainer!: boolean;
   isHideAddUserToExistingChannelContainer!: boolean;
+  isHideChannelDescriptionContainer!: boolean;
 
   constructor(private toggleMenuService: ToggleMenuService) {}
 
@@ -40,6 +41,9 @@ export class ChatMainComponent implements OnInit {
     this.toggleMenuService.isHideAddUserToExistingChannelContainer$.subscribe(
       (value) => (this.isHideAddUserToExistingChannelContainer! = value)
     );
+    this.toggleMenuService.isHideChannelDescriptionContainer$.subscribe(
+      (value) => (this.isHideChannelDescriptionContainer! = value)
+    );
   }
 
   // Generische Methode zum Umschalten des Containers
@@ -52,6 +56,7 @@ export class ChatMainComponent implements OnInit {
       | 'smallChat'
       | 'addUser'
       | 'addUserToExistingChannel'
+      | 'channelDescription'
   ) {
     this.toggleMenuService.toggleContainer(container);
   }

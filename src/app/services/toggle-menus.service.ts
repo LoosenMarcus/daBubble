@@ -19,6 +19,8 @@ export class ToggleMenuService {
   private isHideAddUserToExistingChannelContainerSubject =
     new BehaviorSubject<boolean>(false);
   private isHideChannelContainerSubject = new BehaviorSubject<boolean>(false);
+  private isHideChannelDescriptionContainerSubject =
+    new BehaviorSubject<boolean>(false);
 
   // Exponierte Observables für die Komponenten
   isHideWorkspaceContainer$ =
@@ -35,6 +37,8 @@ export class ToggleMenuService {
   isHideChannelContainer$ = this.isHideChannelContainerSubject.asObservable();
   isHideAddUserToExistingChannelContainer$ =
     this.isHideAddUserToExistingChannelContainerSubject.asObservable();
+  isHideChannelDescriptionContainer$ =
+    this.isHideChannelDescriptionContainerSubject.asObservable();
   // Generische Umschaltmethode, die je nach übergebenem Parameter den Zustand toggelt
   toggleContainer(
     container:
@@ -47,6 +51,7 @@ export class ToggleMenuService {
       | 'direktMessage'
       | 'channel'
       | 'addUserToExistingChannel'
+      | 'channelDescription'
   ) {
     switch (container) {
       case 'workspace':
@@ -94,6 +99,11 @@ export class ToggleMenuService {
           !this.isHideAddUserToExistingChannelContainerSubject.value
         );
         break;
+      case 'channelDescription':
+        this.isHideChannelDescriptionContainerSubject.next(
+          !this.isHideChannelDescriptionContainerSubject.value
+        );
+        break;
       default:
         console.error('Unknown container type');
     }
@@ -111,6 +121,7 @@ export class ToggleMenuService {
       | 'direktMessage'
       | 'channel'
       | 'addUserToExistingChannel'
+      | 'channelDescription'
   ): boolean {
     switch (container) {
       case 'workspace':
@@ -131,6 +142,8 @@ export class ToggleMenuService {
         return this.isHideChannelContainerSubject.value;
       case 'addUserToExistingChannel':
         return this.isHideAddUserToExistingChannelContainerSubject.value;
+      case 'channelDescription':
+        return this.isHideChannelDescriptionContainerSubject.value;
       default:
         console.error('Unknown container type');
         return false;

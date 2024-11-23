@@ -61,12 +61,11 @@
   <input type="text" name="nameInput" placeholder="Name eingeben" />
   <div class="bottom"><button>Hinzufügen</button></div>
 </div>
-}
-
+} @if(!isHideChannelDescriptionContainer){
 <div class="channel-description-container">
   <header>
     <h2># Entwicklerteam</h2>
-    <span class="close">X</span>
+    <span class="close" (click)="toggleContainer('channelDescription')">X</span>
   </header>
   <div class="channel-name-container">
     <header>
@@ -90,3 +89,4 @@
     <a>Vorname Nachname</a>
   </div>
 </div>
+}
