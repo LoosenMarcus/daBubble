@@ -124,4 +124,168 @@
 .wrapper .chat-input-wrapper .chat-input-container .chat-input-container-bottom .chat-functions img {
   height: 20px;
   width: 20px;
+}
+
+.addUserToExistingChannelContainer {
+  position: absolute;
+  top: 250px;
+  right: 550px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #ffffff;
+  padding: 40px;
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.2);
+}
+.addUserToExistingChannelContainer .top {
+  display: flex;
+  align-items: center;
+  border: 0px solid black;
+  justify-content: space-between;
+}
+.addUserToExistingChannelContainer .top .close {
+  font-size: 24px;
+  font-weight: 700;
+}
+.addUserToExistingChannelContainer .top .close:hover {
+  cursor: pointer;
+  color: rgb(68, 77, 242);
+}
+.addUserToExistingChannelContainer .top h2 {
+  font-size: 24px;
+  font-weight: 700;
+}
+.addUserToExistingChannelContainer .channel-Name {
+  display: flex;
+  gap: 15px;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(121, 126, 243);
+}
+.addUserToExistingChannelContainer input {
+  width: 434px;
+  border-radius: 30px;
+  padding: 15px 20px;
+  display: flex;
+  gap: 10px;
+  border: 1px solid rgb(173, 176, 217);
+  font-size: 18px;
+  font-weight: 400;
+  color: rgb(104, 104, 104);
+}
+.addUserToExistingChannelContainer .bottom {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.addUserToExistingChannelContainer .bottom button {
+  border-radius: 25px;
+  padding: 12px 25px;
+  display: flex;
+  gap: 10px;
+  background-color: rgb(104, 104, 104);
+  border: unset;
+  color: rgb(255, 255, 255);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.channel-description-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.2);
+  border-top-left-radius: 30px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.channel-description-container header {
+  width: 792px;
+  display: flex;
+  justify-content: space-between;
+}
+.channel-description-container header h2 {
+  padding: 2px 1px;
+  display: flex;
+  gap: 15px;
+}
+.channel-description-container header .close {
+  font-size: 24px;
+  font-weight: 700;
+}
+.channel-description-container header .close:hover {
+  cursor: pointer;
+  color: rgb(68, 77, 242);
+}
+.channel-description-container .channel-name-container {
+  width: 792px;
+  border: 1px solid rgb(173, 176, 217);
+  border-radius: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.channel-description-container .channel-name-container header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.channel-description-container .channel-name-container header h4 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.channel-description-container .channel-name-container header a {
+  color: rgb(83, 90, 241);
+  font-size: 18px;
+  font-weight: 600;
+}
+.channel-description-container .channel-name-container .channel-name {
+  padding: 2px 1px;
+  font-size: 18px;
+  font-weight: 400;
+}
+.channel-description-container .channel-description {
+  border: 1px solid rgb(173, 176, 217);
+  width: 792px;
+  padding: 20px;
+  gap: 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.channel-description-container .channel-description header {
+  width: 100%;
+}
+.channel-description-container .channel-description header h4 {
+  font-size: 18px;
+  font-weight: 700;
+}
+.channel-description-container .channel-description header a {
+  color: rgb(83, 90, 241);
+  font-size: 18px;
+  font-weight: 600;
+}
+.channel-description-container .channel-description .content {
+  font-size: 18px;
+  font-weight: 400;
+}
+.channel-description-container .channel-description .seperator {
+  height: 1px;
+  border: 1px solid rgb(173, 176, 217);
+}
+.channel-description-container .channel-description a {
+  color: rgb(83, 90, 241);
+  font-size: 24px;
+  font-weight: 400;
 }/*# sourceMappingURL=chat-main.component.css.map */

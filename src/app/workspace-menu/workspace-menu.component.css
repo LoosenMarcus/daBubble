@@ -56,6 +56,21 @@
   display: flex;
   gap: 15px;
 }
+.workspace-middle-container .channel-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  font-weight: 700;
+  border: 0px solid rgb(9, 219, 9);
+  gap: 15px;
+  padding-left: 35px;
+  margin-top: 25px;
+}
+.workspace-middle-container .channel-list span {
+  display: flex;
+  gap: 15px;
+}
 .workspace-middle-container .workspace-middle-container-bottom {
   width: 100%;
   display: flex;
@@ -108,6 +123,28 @@
   margin-block-end: 0;
   margin-block-start: 0;
   font-family: "Nunito", "sans-serif";
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #a8acf6;
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #5961f7;
 }
 
 a {
