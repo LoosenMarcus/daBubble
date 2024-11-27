@@ -1,6 +1,6 @@
 <div class="wrapper">
   <div class="top">
-    <h1>
+    <h1 (click)="toggleContainer('channelDescription')">
       # Entwicklerteam <img src="./../../assets/img/arrow_drop_down.svg" />
     </h1>
     <div class="overview-team">
@@ -17,7 +17,9 @@
   </div>
   <div class="chat-output-main">
     <div class="chat-message-container">
-      <div><img src="./../../assets/img/00c.Charaters (2).svg" /></div>
+      <div (click)="toggleContainer('profile')">
+        <img src="./../../assets/img/00c.Charaters (2).svg" />
+      </div>
       <div class="inner-chat-message-container">
         <div class="name">
           Vorname Nachname
@@ -61,7 +63,7 @@
   <input type="text" name="nameInput" placeholder="Name eingeben" />
   <div class="bottom"><button>Hinzufügen</button></div>
 </div>
-} @if(!isHideChannelDescriptionContainer){
+} @if(isHideChannelDescriptionContainer){
 <div class="channel-description-container">
   <header>
     <h2># Entwicklerteam</h2>
