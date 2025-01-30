@@ -67,6 +67,9 @@ a {
   font-size: 18px;
   font-weight: 400;
   text-decoration: none;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 /* nunito-200 - latin */
